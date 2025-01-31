@@ -8,7 +8,6 @@ document
     const password = document.getElementById("password").value;
     const errorMessage = document.getElementById("errorMessage");
 
-    // Clear previous error message
     errorMessage.textContent = "";
 
     try {
@@ -33,7 +32,7 @@ document
       } else if (response.status === 401) {
         errorMessage.textContent = "E-mail ou mot de passe incorrect.";
       } else if (response.status === 404) {
-        errorMessage.textContent = "Endpoint non trouvé (erreur 404).";
+        errorMessage.textContent = "E-mail ou mot de passe incorrect.";
       } else {
         errorMessage.textContent =
           "Une erreur est survenue. Veuillez réessayer.";
