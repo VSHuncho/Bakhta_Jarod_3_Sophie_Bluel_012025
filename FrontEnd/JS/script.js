@@ -31,6 +31,7 @@ async function loadPhotosAndFilters() {
       displayPhotos(photos); // Affiche toutes les photos
     });
     filtersContainer.appendChild(allButton);
+    
 
     // Ajouter des boutons pour chaque catégorie
     categories.forEach((category) => {
@@ -106,3 +107,13 @@ function filterPhotos(categoryId) {
 
 // Charger les photos et les filtres lorsque le DOM est prêt
 document.addEventListener("DOMContentLoaded", loadPhotosAndFilters);
+
+
+//Cacher les filtres quand l'utilisateur est connecté
+document.addEventListener("DOMContentLoaded", function() {
+  const filtersContainer = document.querySelector('.filters');
+  
+  if (isAuthenticated()) {
+    // Si l'utilisateur est authentifié, masquer les filtres
+    filtersContainer.style.display = 'none';  // Masquer les filtres
+  } })
