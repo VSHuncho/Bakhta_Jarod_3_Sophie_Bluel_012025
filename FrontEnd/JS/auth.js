@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     editModeBar.style.display = "block";
 
     loginLink.addEventListener("click", function (event) {
-      event.preventDefault(); // Empêche l'action par défaut
+      event.preventDefault(); // Empêche l'action par défaut de déconnexion
       logout(); // Déconnecte l'utilisateur
     });
   } else {
